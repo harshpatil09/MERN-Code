@@ -1,0 +1,107 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    style.
+      /* Simple inline styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .section-title {
+        color: #007bff;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 40px;
+      }
+  body
+    header
+      h1= message
+      p A brief introduction to Express.js
+
+    .content
+      section
+        h2.section-title Features of Express.js
+        p Express.js is known for its minimalism, flexibility, and scalability, making it an excellent choice for building server-side applications and APIs. Here are some of its most notable features:
+        
+        ul
+          li Fast and lightweight framework
+          li Robust routing system
+          li Built-in middleware support
+          li Template engine integration (EJS, Pug, Handlebars)
+          li Support for RESTful APIs
+          li Scalable and flexible
+          li Large ecosystem of libraries and middleware
+
+      section
+        h2.section-title Why Use Express.js?
+        p Express.js is designed to simplify the process of building web applications and APIs. Some of the main reasons to use Express include:
+        
+        ul
+          li Minimalistic: It provides a small and lightweight core that allows you to add functionality via middleware and plugins as needed.
+          li Routing: Express makes it easy to define routes and handle HTTP requests with different HTTP methods (GET, POST, PUT, DELETE).
+          li Middleware: Express's middleware functions can manipulate requests and responses, making it easy to perform tasks like authentication, logging, and error handling.
+          li Flexibility: You have full control over your app's structure, which makes it suitable for both small projects and large-scale applications.
+          li Performance: It is designed to be fast and efficient, ensuring high performance even for complex applications.
+
+      section
+        h2.section-title How Does Express.js Work?
+        p Express.js works on top of Node.js's HTTP module, providing a simplified way to handle routing, middleware, and server-side logic. The basic workflow of an Express app consists of:
+        ol
+          li Request Handling: When a request comes in, Express matches it to a route handler based on the URL and HTTP method.
+          li Middleware: If any middleware is defined, it can modify the request and response objects before passing them to the route handler.
+          li Response: Once the route handler completes its task, it sends a response back to the client, typically in the form of HTML, JSON, or other data formats.
+
+      section
+        h2.section-title Example of an Express.js App
+        p Here's a simple example of an Express.js app that serves a basic webpage:
+        
+        pre
+          code
+            | const express = require('express')
+            | const app = express()
+            | 
+            | app.get('/', (req, res) => {
+            |   res.send('Hello, World!')
+            | })
+            | 
+            | app.listen(3000, () => {
+            |   console.log('Server is running on port 3000')
+            | })
+        
+        p This app creates a basic web server that listens on port 3000 and sends "Hello, World!" when accessed at the root URL.
+
+      section
+        h2.section-title Popular Middleware with Express.js
+        p Express's ability to support middleware is one of its most powerful features. Here are a few popular middleware libraries:
+        
+        ul
+          li body-parser: Parses incoming request bodies, making it easy to handle form data and JSON payloads.
+          li cors: Enables Cross-Origin Resource Sharing (CORS), allowing your API to be accessed from different domains.
+          li morgan: A HTTP request logger middleware for Node.js, useful for logging requests during development.
+          li cookie-parser: Parses cookies sent by the client, making it easy to handle sessions and authentication.
+
+    footer
+      p &copy; 2024 Express.js Overview. All Rights Reserved.
